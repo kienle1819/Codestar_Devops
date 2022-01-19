@@ -1,0 +1,13 @@
+---Create config and publickey
+# ssh-keygen
+add file config path /Users/kienle/.ssh/config
+
+Host git-codecommit.*.amazonaws.com
+   User APKAQGVOCWMDQST4KIX2 # Access key ID
+   IdentityFile ~/.ssh/id_rsa
+# add publickey to IAM
+https://console.aws.amazon.com/iam/home#/users/codecomituser?section=security_credentials
+
+---codecommit
+git remote add codecommit  ssh://git-codecommit.us-east-2.amazonaws.com/v1/repos/devops-demo
+git push codecommit
